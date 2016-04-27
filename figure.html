@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Dependencies -->
+<link rel="stylesheet" href="css/style.css">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/index.js"></script>
+<script src="http://a----.github.io/highcharts-export-clientside/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="http://a----.github.io/highcharts-export-clientside/bower_components/highcharts/highcharts.js"></script>
+<script src="http://a----.github.io/highcharts-export-clientside/bower_components/highcharts/modules/exporting.js"></script>
+<script src="http://a----.github.io/highcharts-export-clientside/bower_components/highcharts/modules/canvas-tools.js"></script>
+<script src="http://a----.github.io/highcharts-export-clientside/bower_components/export-csv/export-csv.js"></script>
+<script src="http://a----.github.io/highcharts-export-clientside/bower_components/jspdf/dist/jspdf.min.js"></script>
+
+<!-- Lightbox -->
+
+
+<!-- Export Client-Side module -->
+<script src="http://a----.github.io/highcharts-export-clientside/bower_components/highcharts-export-clientside/highcharts-export-clientside.js"></script>
+
+<!-- graph container -->
+<div class="chart-frame">
+
+<!-- HighCharts container -->
+
+<div class="graphic-container" id="bread-line-graph"> </div>
+
+<!-- Export Button Labels -->
+
+<div class="button-label">DOWNLOAD CHART AND DATA </div>
+
+<!-- Export Buttons -->
+
+             <div class="chart-export" data-chart-selector="#bread-graph">
+                <button type="button" class="chart-button" data-type="image/jpeg">JPEG</button>
+                <button type="button" class="chart-button" data-type="image/png">PNG</button>
+                <button type="button" class="chart-button" data-type="image/svg+xml">SVG</button>
+                <button type="button" class="chart-button" data-type="text/csv">CSV</button>
+                <button type="button" class="chart-button" data-type="application/vnd.ms-excel">XLS</button>
+            </div>
+</div>
+</html>

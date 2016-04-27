@@ -1,0 +1,59 @@
+.chart-button{
+    margin: 0 2px;
+    background-color: #C0C0BB;
+    width: 50px;
+    border-radius: .2em;
+    text-decoration: none;
+    color: #006890;
+    font-weight: 300;
+    float: left;
+    padding: 0;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.chart-button:link{
+    color: #303030;
+    text-decoration: none;
+    font-weight: 300;
+    background-color: #C0C0BB;
+    color: white;
+}
+
+.chart-button:visited{
+    color: #C0C0BB;
+    text-decoration: none;
+    font-weight: 300;
+    outline: none;
+    color: white;   
+}
+
+.chart-button:hover{
+    color: white;
+    background-color: #DF7A00;
+    font-weight: 300;
+    outline: none;   
+}
+
+.chart-frame{
+    width: 100%;
+    padding: 0 0 20px 0;
+    background-color: #f6f6f6;
+}
+
+.graphic-container{
+    position: relative;
+    background-color: #f6f6f6; 
+    padding: 0;
+    font-family: 'Calibri';
+}
+
+.button-label{
+    position: relative;
+    font-size: 10pt;
+    font-family: 'Calibri';
+    color: gray;
+    margin-top: -13px;
+    margin-left: 2px;
+}
