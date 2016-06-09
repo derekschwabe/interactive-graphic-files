@@ -57,3 +57,44 @@
     margin-top: -13px;
     margin-left: 2px;
 }
+
+@media only screen and (max-width: 600px) {
+
+span.highcharts-title{
+
+font-size: 12px !important;
+
+}
+
+span.highcharts-subtitle{
+font-size: 10px !important;
+}
+
+.highcharts-container tspan{
+    font-size: 9px !important;
+}
+
+.highcharts-legend-item text{
+    font-size: 8px !important;
+}
+
+span.highcharts-yaxis-title{
+    font-size: 9px !important;
+}
+
+span.highcharts-xaxis-title{
+    font-size: 9px !important;
+}
+
+.highcharts-container image {
+    display: none !important;
+
+}
+.chart-export {
+    display: none;
+}
+.button-label{
+    display: none;
+}
+
+}
