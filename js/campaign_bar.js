@@ -5,10 +5,11 @@ $( document ).ready(function() {
 // Defining the line chart
 
 $('#bread-line-graph').highcharts({
-  colors: ['#DF7A00','#696969','#006890', '#AAB300', '#899F99', '#AAB300', '#FFF','#6AF9C4'],
+  colors: ['#006890','#DF7A00','#696969','#AAB300', '#899F99', '#AAB300', '#FFF','#6AF9C4'],
 
   chart: {
     backgroundColor: '#f6f6f6',
+    type: 'column',
     height: 350,
     spacingBottom: 20,
     style: {
@@ -26,8 +27,8 @@ $('#bread-line-graph').highcharts({
     },
   credits: {
       enabled: true,
-      text: 'SOURCE: Bureau of Labor Statistics and U.S. Census Bureau',
-      href: 'https://fred.stlouisfed.org/series/UNRATE',
+      text: 'SOURCE: Center for Responsive Politics',
+      href: 'https://www.opensecrets.org/industries/totals.php?cycle=2016&ind=N01',
       style:{
         fontFamily: 'Calibri',
         fontSize: '10pt',
@@ -42,8 +43,9 @@ $('#bread-line-graph').highcharts({
       scale: 1,
     },
   title: {
-    text: 'Unemployment and Poverty Rates Usually Move Together',
+    text: 'Congressional Campaign Contributions from Food and Beverage Industry',
     useHTML: true,
+    widthAdjust: -400,
     margin: 5, 
     align: 'left',
     y: 10,
@@ -53,8 +55,9 @@ $('#bread-line-graph').highcharts({
     } 
   },
   subtitle: {
-    text: '<i>BMI change in children between kindergarten & first grade</i>',
+    text: '<i></i>',
     useHTML: true, 
+    widthAdjust: -400,
     margin: 0,
     y: 27,
     align: 'left',
@@ -64,20 +67,23 @@ $('#bread-line-graph').highcharts({
     }
   },
   xAxis: {
-    categories: ['Sep','Dec', 'Mar', 'Jun', 'Sep', 'Dec',
-    'Mar', 'Jun'
+    categories: ['2000','2002', '2004', '2006', '2008', '2010',
+    '2012','2014','2016'
     ],
     title: {
-      text: 'Month (Sep 1998-Jun 2000)'
+      text: 'Year'
     }
   },
   yAxis: {
     title: {
-      text: 'Body mass index (BMI)',
+      text: 'Million USD',
       useHTML: true
     },
-    min: 16,
-    max: 17,
+    labels: {
+                format: '${value}'
+            },
+    min: 0,
+    max: 30,
     area: {
       dataLabels: {
         enabled: true,
@@ -96,13 +102,14 @@ $('#bread-line-graph').highcharts({
     gridLineDashStyle: 'dot'
   },
   tooltip: {
-    valueSuffix: ' BMI',
+    valuePrefix: '$',
+    valueSuffix: ' million',
     backgroundColor: 'rgba(255, 255, 255, .4)',
     borderWidth: 0,
     shadow: false
   },
   legend: {
-    enabled: true,
+    enabled: false,
     floating: true,
     layout: 'horizontal',
     align: 'right',
@@ -112,14 +119,8 @@ $('#bread-line-graph').highcharts({
     borderWidth: 0
   },
   series: [{
-    name: 'White',
-    data: [16.0, null, null, 16.1, 16.3, null, null, 16.4]
-  }, {
-    name: 'Black',
-    data: [16.35, null, null, 16.35, 16.71, null, null, 16.9]
-  }, {
-    name: 'Hispanic',
-    data: [16.5, null, null, 16.6, 16.9, null, null, 17.0]
+    name: '',
+    data: [14.1, 12.3, 14.8, 12.5, 19.2, 15.5, 27.3, 17.3, 10.9]
   }
   ]
 },
@@ -135,6 +136,7 @@ $('#bread-line-graph').highcharts({
             .add();
 
     });
+
 // Programmatically-defined buttons
 
 $(".chart-export").each(function() {
